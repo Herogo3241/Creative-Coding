@@ -52,9 +52,9 @@ int main()
         SDL_Color color = {static_cast<Uint8>(colorDist(gen)),
                            static_cast<Uint8>(colorDist(gen)),
                            static_cast<Uint8>(colorDist(gen)),
-                           255}; // Full opacity
+                           255}; 
 
-        particles.emplace_back(x, y, 1, color);
+        particles.emplace_back(x, y, 2, color);
     }
 
     bool running = true;
