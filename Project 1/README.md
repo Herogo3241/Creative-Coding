@@ -1,4 +1,4 @@
-# Brownian Motoion
+# Brownian Motion
 
 ## Summary
 Random movement of particle in fluid like liquid or gas
