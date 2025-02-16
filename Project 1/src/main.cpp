@@ -6,7 +6,7 @@
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
-const int NUM_PARTICLES = 100;
+const int NUM_PARTICLES = 400;
 
 int main()
 {
