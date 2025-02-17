@@ -4,7 +4,9 @@
 
 const int DROP_COUNT = 30;
 
-int main(){
+
+// for linux use main instead
+int WinMain(int argc, char* argv[]){
     if(SDL_Init(SDL_INIT_VIDEO) != 0){
         SDL_Log("Error  Initialzing SDL2");
         return 1;

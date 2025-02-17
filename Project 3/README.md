@@ -7,5 +7,4 @@ This project simulates the falling of water droplets, each with a random size, s
 
 ### Demo
 Check out the demo video showcasing the simulation in action:  
-[![Rain Simulation](https://img.youtube.com/vi/6_gsnBgfgn4/0.jpg)](https://youtu.be/6_gsnBgfgn4)
-
+[![Rain Simulation](https://img.youtube.com/vi/vsvoayP0yJY/0.jpg)](https://youtu.be/vsvoayP0yJY)
