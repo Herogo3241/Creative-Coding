@@ -15,9 +15,9 @@ Grid::Grid(int width, int height)
 void Grid::Draw(SDL_Renderer* renderer) {
     for (auto& cell : m_cells) {
         if (cell.isFilled)
-            cell.DrawFilled(renderer); // Draw filled cells
+            cell.DrawFilled(renderer); 
         else
-            cell.DrawOutline(renderer); // Draw empty cell outlines
+            cell.DrawOutline(renderer); 
     }
 }
 
@@ -25,7 +25,7 @@ void Grid::Draw(SDL_Renderer* renderer) {
 void Grid::HandleClick(int mouseX, int mouseY) {
     for (auto& cell : m_cells) {
         if (cell.Contains(mouseX, mouseY)) {  
-            cell.isFilled = !cell.isFilled;  // Toggle cell state
+            cell.isFilled = !cell.isFilled;  
             break;
         }
     }
@@ -48,7 +48,7 @@ int Grid::CountLiveNeighbors(Cell& cell) {
 
     for (int dx : offsets) {
         for (int dy : offsets) {
-            if (dx == 0 && dy == 0) continue;  // Skip the current cell
+            if (dx == 0 && dy == 0) continue;  
 
             Cell* neighbor = GetCell(cell.m_x + dx, cell.m_y + dy);
             if (neighbor && neighbor->isFilled) {
@@ -59,7 +59,7 @@ int Grid::CountLiveNeighbors(Cell& cell) {
     return liveCount;
 }
 
-// Update the grid based on Game of Life rules
+
 void Grid::Update() {
     std::vector<bool> nextState(m_cells.size(), false);
 
@@ -67,13 +67,13 @@ void Grid::Update() {
         int liveNeighbors = CountLiveNeighbors(m_cells[i]);
 
         if (m_cells[i].isFilled) {
-            nextState[i] = (liveNeighbors == 2 || liveNeighbors == 3); // Survives
+            nextState[i] = (liveNeighbors == 2 || liveNeighbors == 3); 
         } else {
-            nextState[i] = (liveNeighbors == 3); // Becomes alive
+            nextState[i] = (liveNeighbors == 3); 
         }
     }
 
-    // Apply the new state
+   
     for (size_t i = 0; i < m_cells.size(); i++) {
         m_cells[i].isFilled = nextState[i];
     }
