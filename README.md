@@ -8,3 +8,4 @@ Welcome to the Creative Coding repository. This collection showcases various pro
 - [Project 3: Rain Simulation](Project%203/README.md)
 - [Project 4: Perlin Noise](Project%204/README.md)
 - [Project 5: Conway's Game of life](Project%205/README.md)
+- [Project 6: Golden Spiral](Project%205/README.md)
